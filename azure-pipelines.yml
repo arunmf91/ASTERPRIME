@@ -7,7 +7,7 @@ resources:
   - repository: ASTERPRIME # The name used to reference this repository in the checkout step
     type: github
     endpoint: githubconn
-    name: https://github.com/arunmf91/ASTERPRIME
+    name: arunmf91/ASTERPRIME
 trigger:
 - main
 
