@@ -13,7 +13,7 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
-
+steps:
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(agent.builddirectory)'
@@ -25,12 +25,4 @@ pool:
     ArtifactName: 'drop'
     publishLocation: 'Container'
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
 
