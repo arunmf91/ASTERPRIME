@@ -8,12 +8,17 @@ resources:
     type: github
     endpoint: githubconn
     name: arunmf91/ASTERPRIME
+  - repository: lab # The name used to reference this repository in the checkout step
+    type: github
+    endpoint: githubconn
+    name: arunmf91/lab
 trigger:
 - main
 
 pool:
   vmImage: ubuntu-latest
 steps:
+- checkout: lab 
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(agent.builddirectory)'
